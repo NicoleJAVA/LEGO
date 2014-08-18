@@ -1,0 +1,41 @@
+resolution 38 26 64
+optimizationParams
+endParamSection
+numLego 37
+LEGO 1x1x1 13 0 34 #ffffff
+LEGO 6x1x1 13 2 21 #ffffff
+LEGO 1x1x1 15 0 27 #ffffff
+LEGO 2x1x1 16 0 25 #ffffff
+LEGO 1x1x1 14 0 37 #ffffff
+LEGO 8x1x2 14 0 28 #ffffff
+LEGO 6x1x1 15 0 37 #ffffff
+LEGO 4x1x1 14 0 34 #ffffff
+LEGO 1x1x4 18 0 31 #ffffff
+LEGO 1x1x1 18 2 47 #888888
+LEGO 6x1x1 13 2 46 #ffffff
+LEGO 1x1x3 13 1 41 #ffffff
+LEGO 3x1x1 18 0 25 #ffffff
+LEGO 4x1x2 11 2 37 #ffffff
+LEGO 1x1x2 20 1 24 #ffffff
+LEGO 1x1x1 15 2 49 #ffffff
+LEGO 3x1x2 15 1 44 #ffffff
+LEGO 1x1x2 14 1 41 #ffffff
+LEGO 1x1x1 13 2 47 #ffffff
+LEGO 6x1x2 12 1 39 #ffffff
+LEGO 6x1x1 16 0 27 #ffffff
+LEGO 1x1x1 12 2 43 #ffffff
+LEGO 1x1x1 13 2 22 #ffffff
+LEGO 1x1x3 14 1 43 #ffffff
+LEGO 2x1x1 13 1 27 #ffffff
+LEGO 4x1x1 13 3 22 #888888
+LEGO 6x1x1 12 2 33 #888888
+LEGO 2x1x1 14 2 20 #ffffff
+LEGO 2x1x1 14 2 48 #ffffff
+LEGO 2x1x1 14 2 30 #888888
+LEGO 2x1x1 13 0 36 #ffffff
+LEGO 4x1x1 14 2 47 #ffffff
+LEGO 8x1x1 15 2 39 #888888
+LEGO 1x1x1 11 2 28 #ffffff
+LEGO 8x1x1 15 1 27 #ffffff
+LEGO 4x1x1 10 3 28 #ffffff
+LEGO 6x1x1 15 1 21 #ffffff

@@ -1,0 +1,9 @@
+resolution 38 26 64
+optimizationParams
+endParamSection
+numLego 4
+
+LEGO 1x1x3 13 1 41 #ffffff
+LEGO 3x1x1 18 0 25 #ffffff
+LEGO 1x1x3 14 1 43 #ffffff
+LEGO 2x1x4 25 50 43 #ffffff
