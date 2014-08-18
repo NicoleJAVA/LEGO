@@ -1,4 +1,4 @@
-resolution 76 13 32
+resolution 38 26 64
 optimizationParams
 endParamSection
 numLego 3
