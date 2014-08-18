@@ -6,7 +6,7 @@ import java.util.*;
 
 
 public class test {
-	   static String fileName = "to_convert_to_1x6";
+	   static String fileName = "to_convert_to_2x3";
 	   static String xx= "";
 	   static String yy ="";
 	   static String zz ="";
@@ -74,6 +74,9 @@ public class test {
               else if( brickType.equals("1x1x6")){resultStr=convert_1x1x6(xx,yy,zz,alongXpiY90);}
               else if( brickType.equals("8x1x1")){resultStr=convert_8x1x1(xx,yy,zz,alongXpi);}
               else if( brickType.equals("1x1x8")){resultStr=convert_1x1x8(xx,yy,zz,alongXpiY90);}
+              else if( brickType.equals("2x1x2")){resultStr=convert_2x1x2(xx,yy,zz,alongXpiY90);}
+              else if( brickType.equals("3x1x2")){resultStr=convert_3x1x2(xx,yy,zz,alongXpi);}
+              else if( brickType.equals("2x1x3")){resultStr=convert_2x1x3(xx,yy,zz,alongXpiY90);}
               System.out.println("resultStr is "+resultStr);
 		      
 		      /*****/
@@ -83,7 +86,7 @@ public class test {
 		   }   // End if isLEGOline  
 	   } 
 	   public static String convert_2x1x1(String xx, String yy, String zz, String rotateMat){ /*rotateMat is rotaion Matrix*/
-		   /*convert 3x1x1 by rotate MLCAD 3004.dat along x  axis by pi*/
+		   /*convert  by rotate MLCAD 3004.dat along x  axis by pi*/
 
 		      String spaceStr = " ";
 		      String convertStr = "1 7 "+xx+spaceStr+yy+spaceStr+zz+spaceStr;
@@ -93,7 +96,7 @@ public class test {
 		   
 	   }	   
 	   public static String convert_1x1x2(String xx, String yy, String zz,String rotateMat){ /*rotateMat is rotaion Matrix*/
-		   /*convert 3x1x1 by rotate MLCAD 3004.dat along x  axis by pi, along y bi pi/2 */
+		   /*convert  by rotate MLCAD 3004.dat along x  axis by pi, along y bi pi/2 */
 		      xx = Integer.toString(Integer.parseInt(xx)-10);
 		      zz = Integer.toString(Integer.parseInt(zz)+10);	
 		      String spaceStr = " ";
@@ -109,7 +112,7 @@ public class test {
 		      return convertStr;	   
 	   }
 	   public static String convert_1x1x3(String xx, String yy, String zz,String rotateMat){ /*rotateMat is rotaion Matrix*/
-		   /*convert 3x1x1 by rotate MLCAD 3622.dat along x  axis by pi, along y bi pi/2 */
+		   /*convert  by rotate MLCAD 3622.dat along x  axis by pi, along y bi pi/2 */
 		      xx = Integer.toString(Integer.parseInt(xx)-20);
 		      zz = Integer.toString(Integer.parseInt(zz)+20);	
 		      String spaceStr = " ";
@@ -118,7 +121,7 @@ public class test {
 			      return convertStr;
 	   }
 	   public static String convert_4x1x1(String xx, String yy, String zz, String rotateMat){ /*rotateMat is rotaion Matrix*/
-		   /*convert 3x1x1 by rotate MLCAD 3010.dat along x  axis by pi*/
+		   /*convert  by rotate MLCAD 3010.dat along x  axis by pi*/
 
 		      String spaceStr = " ";
 		      String convertStr = "1 7 "+xx+spaceStr+yy+spaceStr+zz+spaceStr;
@@ -128,7 +131,7 @@ public class test {
 		   
 	   }	   
 	   public static String convert_1x1x4(String xx, String yy, String zz,String rotateMat){ /*rotateMat is rotaion Matrix*/
-		   /*convert 3x1x1 by rotate MLCAD 3010.dat along x  axis by pi, along y bi pi/2 */
+		   /*convert  by rotate MLCAD 3010.dat along x  axis by pi, along y bi pi/2 */
 		      xx = Integer.toString(Integer.parseInt(xx)-30);
 		      zz = Integer.toString(Integer.parseInt(zz)+30);	
 		      String spaceStr = " ";
@@ -137,7 +140,7 @@ public class test {
 		      return convertStr;
 	   }
 	   public static String convert_6x1x1(String xx, String yy, String zz, String rotateMat){ /*rotateMat is rotaion Matrix*/
-		   /*convert 3x1x1 by rotate MLCAD 3009.dat along x  axis by pi*/
+		   /*convert  by rotate MLCAD 3009.dat along x  axis by pi*/
 
 		      String spaceStr = " ";
 		      String convertStr = "1 7 "+xx+spaceStr+yy+spaceStr+zz+spaceStr;
@@ -147,7 +150,7 @@ public class test {
 		   
 	   }	   
 	   public static String convert_1x1x6(String xx, String yy, String zz,String rotateMat){ /*rotateMat is rotaion Matrix*/
-		   /*convert 3x1x1 by rotate MLCAD 3009.dat along x  axis by pi, along y bi pi/2 */
+		   /*convert  by rotate MLCAD 3009.dat along x  axis by pi, along y bi pi/2 */
 		      xx = Integer.toString(Integer.parseInt(xx)-50);
 		      zz = Integer.toString(Integer.parseInt(zz)+50);	
 		      String spaceStr = " ";
@@ -156,7 +159,7 @@ public class test {
 		      return convertStr;
 	   }	   
 	   public static String convert_8x1x1(String xx, String yy, String zz, String rotateMat){ /*rotateMat is rotaion Matrix*/
-		   /*convert 3x1x1 by rotate MLCAD 3008.dat along x  axis by pi*/
+		   /*convert  by rotate MLCAD 3008.dat along x  axis by pi*/
 
 		      String spaceStr = " ";
 		      String convertStr = "1 7 "+xx+spaceStr+yy+spaceStr+zz+spaceStr;
@@ -165,16 +168,42 @@ public class test {
 		      return convertStr;
 		   
 	   }	   
-	   public static String convert_1x1x8(String xx, String yy, String zz,String rotateMat){ /*rotateMat is rotaion Matrix*/
-		   /*convert 3x1x1 by rotate MLCAD 3008.dat along x  axis by pi, along y bi pi/2 */
+ 	   public static String convert_1x1x8(String xx, String yy, String zz,String rotateMat){ /*rotateMat is rotaion Matrix*/
+		   /*convert  by rotate MLCAD 3008.dat along x  axis by pi, along y bi pi/2 */
 		      xx = Integer.toString(Integer.parseInt(xx)-70);
 		      zz = Integer.toString(Integer.parseInt(zz)+70);	
 		      String spaceStr = " ";
 		      String convertStr = "1 7 "+xx+spaceStr+yy+spaceStr+zz+spaceStr;
 		      convertStr = convertStr + rotateMat + spaceStr+"3008.dat";
 		      return convertStr;
+	   }	 
+	   public static String convert_2x1x2(String xx, String yy, String zz,String rotateMat){ /*rotateMat is rotaion Matrix*/
+		   /*convert 2x1x2 by rotate MLCAD 3003.dat along x  axis by pi */	
+		      String spaceStr = " ";
+		      String convertStr = "1 7 "+xx+spaceStr+yy+spaceStr+zz+spaceStr;
+		      convertStr = convertStr + rotateMat + spaceStr+"3003.dat";
+		      return convertStr;
+	   }	
+	   public static String convert_3x1x2(String xx, String yy, String zz, String rotateMat){ /*rotateMat is rotaion Matrix*/
+		   /*convert  by rotate MLCAD 3002.dat along x  axis by pi*/
+
+		      String spaceStr = " ";
+		      String convertStr = "1 7 "+xx+spaceStr+yy+spaceStr+zz+spaceStr;
+		      convertStr = convertStr + rotateMat + spaceStr+"3002.dat";
+		      System.out.println( "convertStr is "+convertStr );	
+		      return convertStr;
+		   
 	   }	   
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */	   
+ 	   public static String convert_2x1x3(String xx, String yy, String zz,String rotateMat){ /*rotateMat is rotaion Matrix*/
+		   /*convert  by rotate MLCAD 3002.dat along x  axis by pi, along y bi pi/2. shift[x,z] is [-10,+10]  */
+		      xx = Integer.toString(Integer.parseInt(xx)-10);
+		      zz = Integer.toString(Integer.parseInt(zz)+10);	
+		      String spaceStr = " ";
+		      String convertStr = "1 7 "+xx+spaceStr+yy+spaceStr+zz+spaceStr;
+		      convertStr = convertStr + rotateMat + spaceStr+"3002.dat";
+		      return convertStr;
+	   }
+	   /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */	   
 	   
 	   public static int checkLineType( String lineInput ){
 		   if( lineInput.length() >= 4 ){
