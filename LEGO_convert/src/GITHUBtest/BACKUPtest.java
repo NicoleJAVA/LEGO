@@ -3,7 +3,6 @@
          backup 
 
 ***********************/
-
 package test;
 import java.io.*; 
 import java.util.*;
@@ -72,6 +71,11 @@ public class test {
               else if( brickType.equals("2x1x3")){resultStr=convert_2x1x3(xx,yy,zz,alongXpiY90);}
               else if( brickType.equals("4x1x2")){resultStr=convert_4x1x2(xx,yy,zz,alongXpi);}
               else if( brickType.equals("2x1x4")){resultStr=convert_2x1x4(xx,yy,zz,alongXpiY90);}
+              else if( brickType.equals("6x1x2")){resultStr=convert_6x1x2(xx,yy,zz,alongXpi);}
+              else if( brickType.equals("2x1x6")){resultStr=convert_2x1x6(xx,yy,zz,alongXpiY90);}
+              else if( brickType.equals("8x1x2")){resultStr=convert_8x1x2(xx,yy,zz,alongXpi);}
+              else if( brickType.equals("2x1x8")){resultStr=convert_2x1x8(xx,yy,zz,alongXpiY90);}
+		      
 		      System.out.println("resultStr is "+resultStr);		      
 		      /*****/
 		      writeToLDR(resultStr);
@@ -203,7 +207,41 @@ public class test {
 		      convertStr = convertStr + rotateMat + spaceStr+"3001.dat";
 		      return convertStr;
 	   } 	   
- /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */	   	   
+	   public static String convert_6x1x2(String xx, String yy, String zz, String rotateMat){ /*rotateMat is rotaion Matrix*/
+	   /*convert to MLCAD 2x6 by rotating MLCAD 2456.dat along x  axis by pi*/
+		      String spaceStr = " ";
+		      String convertStr = "1 7 "+xx+spaceStr+yy+spaceStr+zz+spaceStr;
+		      convertStr = convertStr + rotateMat + spaceStr+"2456.dat";
+		      System.out.println( "convertStr is "+convertStr );	
+		      return convertStr;		   
+	   }	   
+ 	   public static String convert_2x1x6(String xx, String yy, String zz,String rotateMat){ /*rotateMat is rotaion Matrix*/
+	   /*convert to MLCAD 2x6 by rotating 2456.dat along x  axis by pi, along y bi pi/2. shift[x,z] is [-40,+40]  */
+		      xx = Integer.toString(Integer.parseInt(xx)-40);
+		      zz = Integer.toString(Integer.parseInt(zz)+40);	
+		      String spaceStr = " ";
+		      String convertStr = "1 7 "+xx+spaceStr+yy+spaceStr+zz+spaceStr;
+		      convertStr = convertStr + rotateMat + spaceStr+"2456.dat";
+		      return convertStr;
+	   } 
+	   public static String convert_8x1x2(String xx, String yy, String zz, String rotateMat){ /*rotateMat is rotaion Matrix*/
+	   /*convert to MLCAD 2x8 by rotating MLCAD 3007.dat along x  axis by pi*/
+		      String spaceStr = " ";
+		      String convertStr = "1 7 "+xx+spaceStr+yy+spaceStr+zz+spaceStr;
+		      convertStr = convertStr + rotateMat + spaceStr+"3007.dat";
+		      System.out.println( "convertStr is "+convertStr );	
+		      return convertStr;		   
+	   }	   
+ 	   public static String convert_2x1x8(String xx, String yy, String zz,String rotateMat){ /*rotateMat is rotaion Matrix*/
+	   /*convert to MLCAD 2x8 by rotating 3007.dat along x  axis by pi, along y bi pi/2. shift[x,z] is [-60,+60]  */
+		      xx = Integer.toString(Integer.parseInt(xx)-60);
+		      zz = Integer.toString(Integer.parseInt(zz)+60);	
+		      String spaceStr = " ";
+		      String convertStr = "1 7 "+xx+spaceStr+yy+spaceStr+zz+spaceStr;
+		      convertStr = convertStr + rotateMat + spaceStr+"3007.dat";
+		      return convertStr;
+	   } 	   
+ 	   /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */	   	   
 	   public static int checkLineType( String lineInput ){
 		   if( lineInput.length() >= 4 ){
 			   //   System.out.println( lineInput.substring( 0, 4 ) );
